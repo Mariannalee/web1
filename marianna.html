@@ -32,6 +32,22 @@
 
     <body>
 
+        <script>
+        // 檢查 LocalStorage 中是否有 viewCount
+        if (localStorage.getItem('viewCount')) {
+            // 如果有，將其轉換為數字並增加 1
+            var viewCount = parseInt(localStorage.getItem('viewCount')) + 1;
+        } else {
+            // 如果沒有，初始化為 1
+            var viewCount = 1;
+        }
+
+        // 將更新後的 viewCount 存回 LocalStorage
+        localStorage.setItem('viewCount', viewCount);
+
+        // 將 viewCount 顯示在網頁上
+        document.getElementById('viewCount').innerText = viewCount;
+    </script>
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
