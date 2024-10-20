@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import './App.css';
-
 function App() {
   // 管理留言列表
   const [messages, setMessages] = useState([]);
